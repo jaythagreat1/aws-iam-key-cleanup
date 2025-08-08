@@ -96,14 +96,14 @@ zip function.zip lambda_function.py
 
 | File                   | Description                          |
 | ---------------------- | ------------------------------------ |
-| `lambda_function.py`   | Main AWS Lambda function logic that checks IAM users' access key activity |
-| `README.md`            | Project overview, setup instructions, and architecture explanation |
-| `iam-role-policy.json` | IAM policy that allows the Lambda to list IAM users, update access keys, and send SNS alerts |
-| `trust-policy.json`    | Trust relationship policy to allow Lambda to assume the execution role |
+| [`lambda_function.py`](./lambda_function.py)| Main AWS Lambda function logic that checks IAM users' access key activity |
+| [`README.md`](./README.md)| Project overview, setup instructions, and architecture explanation |
+| [`iam-role-policy.json`](./iam-role-policy.json) | IAM policy that allows the Lambda to list IAM users, update access keys, and send SNS alerts |
+| [`trust-policy.json`](./trust-policy.json)| Trust relationship policy to allow Lambda to assume the execution role |
+| [`LICENSE`](./LICENSE) | MIT License for this project |
 
 ## 🏗️ Architecture
-
-Add an architecture diagram here (e.g., `assets/architecture.png`).
+![sys-desi2](https://github.com/user-attachments/assets/56fdd6c1-d42a-4dd2-b44c-9209d309722a)
 
 ## ✅ Setup Steps
 
@@ -111,11 +111,6 @@ Add an architecture diagram here (e.g., `assets/architecture.png`).
 2. Deploy Lambda with the Python code
 3. Set SNS topic ARN as an environment variable
 4. Schedule Lambda using EventBridge (e.g., daily trigger)
-
-## 📝 License
-
-This project is licensed under the MIT License. See `LICENSE` for details. Sample IAM permissions policy        |
-| `trust-policy.json`    | Sample trust relationship for Lambda |
 
 ---
 
