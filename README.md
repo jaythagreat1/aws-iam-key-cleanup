@@ -111,12 +111,6 @@ Add an architecture diagram here (e.g., `assets/architecture.png`).
 3. Set SNS topic ARN as an environment variable
 4. Schedule Lambda using EventBridge (e.g., daily trigger)
 
-## 📝 License
-
-This project is licensed under the MIT License. See `LICENSE` for details. Sample IAM permissions policy        |
-| `trust-policy.json`    | Sample trust relationship for Lambda |
-
----
 
 ## 🤔 Why This Matters
 
