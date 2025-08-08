@@ -66,6 +66,16 @@ zip function.zip lambda_function.py
 - Attach both policies to the IAM role
 - Attach this IAM role to your Lambda function as its **Execution Role**
 
+📌  This Lambda execution role provides the permissions required for the function to:
+- List IAM users and access keys
+
+- Get last used dates for keys
+
+- Disable access keys
+
+- Publish notifications to SNS
+
+
 ### 5. Create SNS Topic and Subscribe
 
 - Go to Amazon SNS
@@ -73,6 +83,8 @@ zip function.zip lambda_function.py
    ![sns-topic](https://github.com/user-attachments/assets/04f9ffd8-6c6e-4243-a885-9739c47ef477)
   - Add your email as a subscriber
   - Confirm the subscription via email
+    ![email-confirm](https://github.com/user-attachments/assets/a5519185-ad40-47e8-9c64-f2bbded43136)
+
 
 ### 6. Create EventBridge Scheduler
 
