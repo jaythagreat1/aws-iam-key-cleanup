@@ -2,8 +2,6 @@
 # 🛡️ AWS IAM Access Key Cleanup Automation
 
 This project is an AWS serverless solution to automatically detect and disable stale IAM access keys. It helps organizations improve their security posture by enforcing best practices around key rotation and cleanup.
-![sys-desi2](https://github.com/user-attachments/assets/065af551-e431-4082-86b2-325532e526e4)
-
 
 
 ---
@@ -28,6 +26,8 @@ This project is an AWS serverless solution to automatically detect and disable s
 - **Amazon EventBridge**: Triggers Lambda daily
 - **Amazon SNS**: Sends notification emails
 - **IAM**: Roles and policies for access control
+   ![sys-desi2](https://github.com/user-attachments/assets/065af551-e431-4082-86b2-325532e526e4)
+
 
 ---
 
@@ -44,7 +44,7 @@ cd aws-iam-key-cleanup
 ### 2. Edit Lambda Script
 
 - Update `lambda_function.py` with your **SNS topic ARN** and key age threshold (default: 90 days)
-![lambda-script](https://github.com/user-attachments/assets/07cebf8f-a3fd-49ed-870f-c7adb6441d53)
+![lambda-script png](https://github.com/user-attachments/assets/d0d813b6-c525-4a88-9c08-2b0b771a4006)
 
 ---
 
@@ -71,7 +71,9 @@ zip function.zip lambda_function.py
 - Attach both policies to the IAM role
 - Attach this IAM role to your Lambda function as its **Execution Role**
 
-📌  This Lambda execution role provides the permissions required for the function to:
+---
+
+ 📌  This Lambda execution role provides the permissions required for the function to:
 - List IAM users and access keys
 
 - Get last used dates for keys
@@ -88,10 +90,12 @@ zip function.zip lambda_function.py
 - Go to Amazon SNS
   - Create a topic (e.g., `iam-key-alerts`)
    ![sns-topic](https://github.com/user-attachments/assets/04f9ffd8-6c6e-4243-a885-9739c47ef477)
+
   - Add your email as a subscriber
     ![email-sub](https://github.com/user-attachments/assets/42a671fa-7ebf-4e0a-91ac-78fb841816bd)
-  - Confirm the subscription via email
-    ![email-confirm](https://github.com/user-attachments/assets/a5519185-ad40-47e8-9c64-f2bbded43136)
+    
+ - Confirm the subscription via email
+    ![email-conf](https://github.com/user-attachments/assets/bea5295c-4b68-4571-8e6e-08235f239f94)
 
 
 ---
@@ -110,9 +114,12 @@ zip function.zip lambda_function.py
 ---
 
 ## 📧 Email Sample
-![email-sample](https://github.com/user-attachments/assets/aebebe96-d42f-404c-80a1-f50126b5e568)
+- 📬 Integrates with Amazon SNS to send automated email notifications when outdated IAM Access Keys are detected.
+- 🔒 Helps enforce proactive AWS security hygiene by alerting teams before keys become high-risk.
+![email-sample jpg](https://github.com/user-attachments/assets/354cebd4-a70b-4961-9579-089fe1fd13f7)
 
 ---
+
 
 ## 📁 Files
 
