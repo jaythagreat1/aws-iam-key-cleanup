@@ -35,7 +35,7 @@ This project is an AWS serverless solution to automatically detect and disable s
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/johnathanhorner/aws-iam-key-cleanup.git
+git clone (https://github.com/jaythagreat1/aws-iam-key-cleanup).git
 cd aws-iam-key-cleanup
 ```
 <!-- ✅ Replace `johnathanhorner` with your GitHub username -->
