@@ -2,7 +2,8 @@
 # 🛡️ AWS IAM Access Key Cleanup Automation
 
 This project is an AWS serverless solution to automatically detect and disable stale IAM access keys. It helps organizations improve their security posture by enforcing best practices around key rotation and cleanup.
-![architecture](https://github.com/user-attachments/assets/2184c627-87e2-48c3-b8e5-b60d14accee2)
+![sys-desi2](https://github.com/user-attachments/assets/065af551-e431-4082-86b2-325532e526e4)
+
 
 
 ---
@@ -21,7 +22,7 @@ This project is an AWS serverless solution to automatically detect and disable s
 
 ---
 
-## 🧰 Architecture
+## 🏗️ Architecture
 
 - **AWS Lambda (Python)**: Main logic to evaluate and disable old keys
 - **Amazon EventBridge**: Triggers Lambda daily
@@ -122,16 +123,6 @@ zip function.zip lambda_function.py
 | [`iam-role-policy.json`](./iam-role-policy.json) | IAM policy that allows the Lambda to list IAM users, update access keys, and send SNS alerts |
 | [`trust-policy.json`](./trust-policy.json)| Trust relationship policy to allow Lambda to assume the execution role |
 | [`LICENSE`](./LICENSE) | MIT License for this project |
-
-## 🏗️ Architecture
-![sys-desi2](https://github.com/user-attachments/assets/56fdd6c1-d42a-4dd2-b44c-9209d309722a)
-
-## ✅ Setup Steps
-
-1. Create a new IAM Role with the provided policies
-2. Deploy Lambda with the Python code
-3. Set SNS topic ARN as an environment variable
-4. Schedule Lambda using EventBridge (e.g., daily trigger)
 
 ---
 
