@@ -45,6 +45,8 @@ cd aws-iam-key-cleanup
 - Update `lambda_function.py` with your **SNS topic ARN** and key age threshold (default: 90 days)
 ![lambda-script](https://github.com/user-attachments/assets/07cebf8f-a3fd-49ed-870f-c7adb6441d53)
 
+---
+
 ### 3. Zip and Upload Lambda Code
 
 ```bash
@@ -54,6 +56,8 @@ zip function.zip lambda_function.py
 - Go to AWS Console → Lambda → Create Function
   - Runtime: Python 3.12 or latest supported version
   - Upload the `function.zip` file
+
+---
 
 ### 4. Create IAM Role for Lambda
 
@@ -76,15 +80,20 @@ zip function.zip lambda_function.py
 - Publish notifications to SNS
 
 
+---
+
 ### 5. Create SNS Topic and Subscribe
 
 - Go to Amazon SNS
   - Create a topic (e.g., `iam-key-alerts`)
    ![sns-topic](https://github.com/user-attachments/assets/04f9ffd8-6c6e-4243-a885-9739c47ef477)
   - Add your email as a subscriber
+    ![email-sub](https://github.com/user-attachments/assets/42a671fa-7ebf-4e0a-91ac-78fb841816bd)
   - Confirm the subscription via email
     ![email-confirm](https://github.com/user-attachments/assets/a5519185-ad40-47e8-9c64-f2bbded43136)
 
+
+---
 
 ### 6. Create EventBridge Scheduler
 
